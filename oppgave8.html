@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+    <style>
+        .stilig {
+            background-color: blueviolet;
+            border: 5px dotted black;
+            margin-top: 0px;
+            margin-bottom: 1px;
+            margin-right: 500px;
+            margin-left: 0px;
+            padding: 0;
+        }
+        .stilig1 {
+            background-color: chocolate;
+            border: 3px solid red;
+            margin-top: 0px;
+            margin-bottom: 1px;
+            margin-right: 500px;
+            margin-left: 0px;
+            padding: 0;
+        }
+        .stilig2 {
+            background-color: none;
+            border: 10px double hotpink;
+            margin-top: 0px;
+            margin-bottom: 1px;
+            margin-right: 300px;
+            margin-left: 0px;
+            padding: 0;
+
+        }
+        .stilig3 {
+            background-color: dodgerblue;
+            border: 10px dashed hotpink;
+            margin-top: 0px;
+            margin-bottom: 1px;
+            margin-right: 600px;
+            margin-left: 0px;
+            padding: 0;
+        }
+        .stilig4 {
+            background-color: hotpink;
+            border: 10px dashed grey;
+            margin-top: 0px;
+            margin-bottom: 1px;
+            margin-right: 600px;
+            margin-left: 0px;
+            padding: 0;
+        }
+      
+    </style>
+    </head>
+
+        <div id="bla">Bla bla bla</div>
+        <input id="chk" type="checkbox" onchange="toggleStyle()" />
+        <div id="bla1">Bla Bla Bla </div>
+        <input id="chk1" type="checkbox" onchange="toggleStyle1()"/>
+        <div id="bla2">Bla Bla Bla</div>
+        <input id="chk2" type="checkbox" onchange="toggleStyle2()"/>
+        <div id="bla3">Bla Bla Bla</div>
+        <input id="chk3" type="checkbox" onchange="toggleStyle3()"/>
+        <div id="bla4">Bla Bla Bla</div>
+        <input id="chk4" type="checkbox" onchange="toggleStyle4()"/>
+        
+
+        
+    <script>
+        function toggleStyle() {
+            var isChecked = document.getElementById('chk').checked;
+            document.getElementById('bla').classList.toggle('stilig', isChecked);
+        }
+        function toggleStyle1() {
+            var isChecked = document.getElementById('chk1').checked;
+            document.getElementById('bla1').classList.toggle('stilig1', isChecked);
+        }
+        function toggleStyle2() {
+            var isChecked = document.getElementById('chk2').checked;
+            document.getElementById('bla2').classList.toggle('stilig2', isChecked);
+        }
+        function toggleStyle3() {
+            var isChecked = document.getElementById('chk3').checked;
+            document.getElementById('bla3').classList.toggle('stilig3', isChecked);
+        }
+        function toggleStyle4() {
+            var isChecked = document.getElementById('chk4').checked;
+            document.getElementById('bla4').classList.toggle('stilig4', isChecked);
+        }
+
+        
+        </script>
+    </body>
+</html>
