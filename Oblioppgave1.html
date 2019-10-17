@@ -64,6 +64,20 @@
         letter-spacing: 3px;
         text-shadow: 3px 2px grey;
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: rgba(0, 0, 0, 0.0);
+        padding: 100%;
+    }
+
+    .grid-item {
+        background-color: rgba(0, 0, 0, 0.0);
+        border: 1px solid rgba(0, 0, 0, 0.0);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
 </style>
 <body>
 
@@ -72,55 +86,66 @@
 
 
     <div id="wrapermenu"></div>
+    <div class="grid-container">
+        <div class="grid-item">0</div>
+        <div class="grid-item">1</div>
+        <div class="grid-item">0</div>
 
-    <script>
+        <script>
 
-        var menuHTML = `<div id="north" onclick="knapp1(this)" style="color:white;">North</div>
-                                            <div id="south" onclick="knapp2(this)" style="color:white;">South</div>
-                                            <div id="east" onclick="knapp3(this)" style="color:white;">East</div>
-                                            <div id="west" onclick="knapp4(this)" style="color:white;">West</div>`;
-        var wrapermenu = document.getElementById('wrapermenu');
-        var moose = `<img id="moose" src="moose.jpg" alt="moose" width="500px" height="500px" />`
-        var bear = `<img id="bear" src="bear2.jpg" alt="bear" width="500px" height="500px" />`
-        var zebra = `<img id="zebra" src="zebra.jpg" alt="zebra" width="600px" height="400px" />`
-        var lion = `<img id="lion" src="lion.jpg" alt="lion" width="600px" height="400px" />`
-        var panda = `<img id="panda" src="panda.jpg" alt="panda" width="600px" height="400px" />`
-        var tiger = `<img id="tiger" src="tiger.jpg" alt="tiger" width="600px" height="400px" />`
-        var liberty = `<img id="liberty" src="liberty.jpg" alt="liberty" width="600px" height="400px" />`
-        var trump = `<img id="trump" src="trump.jpg" alt="trump" width="600px" height="400px" />`
-        function toggleMenu() {
+            var menuHTML = `<div id="north" onclick="knapp1(this)" style="color:white;">North</div>
+                                                                <div id="south" onclick="knapp2(this)" style="color:white;">South</div>
+                                                                <div id="east" onclick="knapp3(this)" style="color:white;">East</div>
+                                                                <div id="west" onclick="knapp4(this)" style="color:white;">West</div>`;
+            var wrapermenu = document.getElementById('wrapermenu');
+            var moose = `<img id="moose" src="moose.jpg" alt="moose" width="500px" height="500px" />`
+            var bear = `<img id="bear" src="bear2.jpg" alt="bear" width="500px" height="500px" />`
+            var zebra = `<img id="zebra" src="zebra.jpg" alt="zebra" width="600px" height="400px" />`
+            var lion = `<img id="lion" src="lion.jpg" alt="lion" width="600px" height="400px" />`
+            var panda = `<img id="panda" src="panda.jpg" alt="panda" width="600px" height="400px" />`
+            var tiger = `<img id="tiger" src="tiger.jpg" alt="tiger" width="600px" height="400px" />`
+            var liberty = `<img id="liberty" src="liberty.jpg" alt="liberty" width="600px" height="400px" />`
+            var trump = `<img id="trump" src="trump.jpg" alt="trump" width="600px" height="400px" />`
+            function toggleMenu() {
 
 
-            if (wrapermenu.innerHTML == menuHTML) {
-                wrapermenu.innerHTML = '';
+                if (wrapermenu.innerHTML == menuHTML) {
+                    wrapermenu.innerHTML = '';
+
+                }
+                else {
+                    wrapermenu.innerHTML = menuHTML;
+                }
 
             }
-            else {
-                wrapermenu.innerHTML = menuHTML;
+            function knapp1(menuitem) {
+
+                if (menuitem.innerHTML == menuHTML) {
+                    menuitem.innerHTML = '';
+
+                }
+                else {
+                    menuitem.innerHTML += moose;
+                    menuitem.innerHTML += bear;
+                }
             }
 
-        }
-        function knapp1(menuitem) {
-            menuitem.innerHTML += moose;
-            menuitem.innerHTML += bear;
-        }
+            function knapp2(menuitem) {
+                menuitem.innerHTML += zebra;
+                menuitem.innerHTML += lion;
 
-        function knapp2(menuitem) {
-            menuitem.innerHTML += zebra;
-            menuitem.innerHTML += lion;
+            }
+            function knapp3(menuitem) {
+                menuitem.innerHTML += panda;
+                menuitem.innerHTML += tiger;
+            }
+            function knapp4(menuitem) {
+                menuitem.innerHTML += liberty;
+                menuitem.innerHTML += trump;
 
-        }
-        function knapp3(menuitem) {
-            menuitem.innerHTML += panda;
-            menuitem.innerHTML += tiger;
-        }
-        function knapp4(menuitem) {
-            menuitem.innerHTML += liberty;
-            menuitem.innerHTML += trump;
-
-        }
+            }
 
 
-    </script>
+        </script>
 </body>
 </html> 
